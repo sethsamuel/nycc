@@ -21,7 +21,6 @@ function App() {
   const hasLoadedFavorites = useRef(false);
   useEffect(() => {
     const url = new URL(window.location.href);
-    debugger;
     setFavorites(
       url.searchParams
         .get(FAVORITES_KEY)
