@@ -75,6 +75,25 @@ export const EventView = ({
           }}
         ></p>
       </>
-    ) : null}
+    ) : (
+      <a
+        href={`https://calendar.google.com/calendar/u/0/r/eventedit?text=${
+          event.title
+        }&dates=${new Date(event.start_time)
+          .toISOString()
+          .replaceAll("-", "")
+          .replaceAll(":", "")
+          .replace(/\.\d+Z/, "Z")}/${new Date(event.end_time)
+          .toISOString()
+          .replaceAll("-", "")
+          .replaceAll(":", "")
+          .replace(/\.\d+Z/, "Z")}&location=${event.location}&details=${
+          event.description
+        }`}
+        target="_blank"
+      >
+        Add to Calendar
+      </a>
+    )}
   </div>
 );
