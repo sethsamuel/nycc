@@ -68,7 +68,7 @@ export const EventView = ({
         <p
           className={css.description}
           dangerouslySetInnerHTML={{
-            __html: event.description.replace(
+            __html: event.description?.replace(
               LINK_REGEX,
               "<a target='__blank' href='$1'>link</a>"
             ),
