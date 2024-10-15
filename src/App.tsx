@@ -96,8 +96,8 @@ function App() {
     return Object.values(events)
       .filter(
         (e) =>
-          (e.title.toLowerCase().includes(search.toLowerCase()) ||
-            e.description.toLowerCase().includes(search.toLowerCase())) &&
+          (e.title?.toLowerCase().includes(search.toLowerCase()) ||
+            e.description?.toLowerCase().includes(search.toLowerCase())) &&
           (selectedCategories.length === 0 ||
             e.global_categories.find((c) =>
               selectedCategories.includes(c.name)
